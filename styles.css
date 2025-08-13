@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #007398;
+    --background-color: #f5f5f5;
+    --padding: 20px;
+    --text-color: #fff;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #5c5c5c;
+    font-weight: 500;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    gap: 10px;
+}
+
+header img {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.controls {
+    flex-shrink: 0;
+    display: flex;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--padding);
+    align-items: center;
+}
+
+main form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+form input[type="text"],
+form button[type="submit"],
+form button[type="reset"] {
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    border: none;
+    width: 30%;
+    box-shadow: 0px 0px 1px;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 400px;
+    width: 100%;
+}
+
+form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+form button[type="reset"] {
+    background-color: #5c5c5c;
+    color: var(--text-color);
+    flex-shrink: 0;
+}
+
+.result {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: 35px auto 2%;
+    padding: 0 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: var(--border-radius);
+}
+
+#letter-buttons button {
+    margin: 2px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 2px;
+    border: #1f1f1f;
+    border-radius: 20%;
+}
+
+main p a {
+    text-decoration: none;
+    color: #45a2db;
+}
+
+.browse-section {
+    margin-top: auto;
+}
+
+.browse {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.browse-results {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 15px 15px 0 40px;
+    border-radius: var(--border-radius);
+    overflow-y: auto;
+    max-height: 300px;
+    transition: max-height 0.3s ease;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-color: #1f1f1f;
+    --primary-color: #007398;
+    --text-color: #ffffff;
+    color: var(--text-color);
+}
+
+.dark-mode-icon {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+#dark-mode-toggle {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle img {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #252525;
+}
+
+body.dark-mode a {
+    color: #90caf9 !important;
+}
+
+body.dark-mode header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode nav a {
+    color: #dcdcdc;
+}
+
+body.dark-mode .result,
+body.dark-mode .browse-results {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+}
+
+body.dark-mode form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode form button[type="reset"] {
+    background-color: #555;
+    color: var(--text-color);
+}
+
+body.dark-mode footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+    main form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+    .result{
+        max-width: 80%;
+    }
+    .browse-section{
+        max-width: 80%;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+    .social-icons a,
+    .social-icons a i {
+        color: #fff !important;
+    }
+
+    footer p {
+        order: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header img {
+        height: 40px;
+    }
+    header h1 {
+        font-size: 18px;
+        white-space: normal;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    form input[type="text"] {
+        width: 90%;
+    }
+
+    form button[type="submit"] {
+        width: 65%;
+    }
+
+    form button[type="reset"] {
+        width: 45%;
+    }
+
+    .result {
+        padding: 0 10px;
+    }
+    .result{
+        max-width: 90%;
+    }
+    .social-icons a,
+    .social-icons a i {
+        color: #fff !important;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
