@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Contact - Homoeopathy Dictionary</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@3/build/index.js"></script>
 </head>
-<body>
+<body background="images/bgimage.jpg">
     <header>
-        <img src="images/logo.png" alt="Logo">
-        <h1>Contact Us</h1>
-        <div class="controls">
-            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-                <img src="images/night.ico" alt="Toggle dark mode" class="dark-mode-icon">
-            </button>
-        </div>
+    <!-- LEFT LOGO -->
+    <img src="images/hindi-logo.png" alt="Left Logo" class="logo left-logo">
+
+    <!-- CENTER TITLE -->
+    <div class="title-container">
+        <h1>Contact us</h1>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-section">
+        <img src="images/logo.png" alt="Right Logo" class="logo right-logo">
+
+    </div>
     </header>
 
     <nav class="contacts">
@@ -32,7 +40,17 @@
     </main>
 
     <footer>
-        <p>&copy; Central Council for Research in Homoeopathy (CCRH) 2025</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/CCRHAYUSH/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ccrhindia/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/ccrhindia" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCnW75XNqYK87vc4W_hkzGYQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <p>&copy; Central Council for Research in Homoeopathy (CCRH) 2025</p>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <img src="images/night.ico" alt="Toggle dark mode" class="dark-mode-icon">
+        </button>
     </footer>
     
     <script src="script.js"></script>

@@ -26,6 +26,16 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
+    background-image: url(images/bgimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+.left-logo {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
 }
 
 nav {
@@ -36,7 +46,7 @@ nav {
 nav a {
     text-decoration: none;
     margin: 0 10px;
-    color: #5c5c5c;
+    color: #333333;
     font-weight: 500;
 }
 
@@ -44,7 +54,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: var(--padding);
@@ -52,12 +61,13 @@ header {
 }
 
 header img {
-    height: 50px;
+    height: 90px;
+    width: 200px;
     flex-shrink: 0;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 40px;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -67,6 +77,26 @@ header h1 {
 .controls {
     flex-shrink: 0;
     display: flex;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.title-container h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.title-container h4 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+    line-height: 1.4;
 }
 
 main {
@@ -145,11 +175,11 @@ main p a {
 }
 
 .browse-section {
-    margin-top: auto;
+    margin-top: 0%;
 }
 
 .browse {
-    margin-top: 20px;
+    margin-top: 90px;
     text-align: center;
 }
 
@@ -268,6 +298,19 @@ body.dark-mode footer {
     color: var(--text-color);
 }
 
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* RIGHT ALIGN DARK MODE BUTTON */
+.footer-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     header h1 {
@@ -298,6 +341,11 @@ body.dark-mode footer {
     footer p {
         order: 0;
         width: 100%;
+    }
+
+    .footer-controls {
+        margin-left: 0;
+        justify-content: center;
     }
 }
 
