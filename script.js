@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const browseResultsDiv = document.querySelector('.browse-results');
     const form = document.querySelector('form');
     const input = document.querySelector('#text-field');
+    const homeContent = document.querySelector('.home-content'); // ✅ added
 
     let dictionary = {};
 
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 dictionary = {};
 
-                // Store lowercase key + original word
                 Object.keys(data).forEach(key => {
                     dictionary[key.toLowerCase()] = {
                         word: key,
@@ -40,12 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
             browseResultsDiv.style.display = 'none';
             browseResultsDiv.innerHTML = '';
             browseResultsDiv.classList.remove('expanded');
+
+            homeContent.style.display = 'block'; // ✅ show back
         });
 
         // SEARCH FUNCTION
         function searchWord(word) {
             if (!word) {
                 resultDiv.style.display = 'none';
+                homeContent.style.display = 'block'; // ✅ show if empty
                 return;
             }
 
@@ -58,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             resultDiv.style.display = 'block';
+            homeContent.style.display = 'none'; // ✅ hide on search
         }
 
         // GENERATE LETTER BUTTONS

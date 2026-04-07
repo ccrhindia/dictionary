@@ -28,6 +28,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     background-image: url(images/bgimage.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;   
 }
@@ -99,15 +100,23 @@ header h1 {
     line-height: 1.4;
 }
 
+/* ✅ FIXED MAIN ALIGNMENT */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;   /* 👈 important fix */
     padding: var(--padding);
-    align-items: center;
 }
 
+/* ✅ HEADINGS LEFT */
+main h2 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* FORM */
 main form {
     display: flex;
     flex-wrap: wrap;
@@ -155,9 +164,7 @@ form button[type="reset"] {
     width: 100%;
     max-width: 800px;
     margin: 35px auto 2%;
-    padding: 0 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 15px;
     border-radius: var(--border-radius);
 }
 
@@ -171,7 +178,7 @@ form button[type="reset"] {
 
 main p a {
     text-decoration: none;
-    color: #45a2db;
+    color: #000000;
 }
 
 .browse-section {
@@ -194,7 +201,35 @@ main p a {
     overflow-y: auto;
     max-height: 300px;
     transition: max-height 0.3s ease;
-    text-decoration: none;
+}
+
+.home-content {
+    margin-left: 12%;
+    margin-right: 12%;
+    font-size: large;
+    text-align: justify;
+}
+
+
+.about-us {
+    font-size: larger;
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.about-points {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+    font-size: larger;
+    align-self: flex-start;
+}
+
+.contact{
+    text-align: center;
+    font-size: larger;
 }
 
 footer {
@@ -227,7 +262,7 @@ footer a {
     color: #fff;
 }
 
-/* Dark Mode Styles */
+/* DARK MODE */
 body.dark-mode {
     --background-color: #1f1f1f;
     --primary-color: #007398;
@@ -238,7 +273,6 @@ body.dark-mode {
 .dark-mode-icon {
     width: 24px;
     height: 24px;
-    pointer-events: none;
 }
 
 #dark-mode-toggle {
@@ -251,13 +285,11 @@ body.dark-mode {
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 #dark-mode-toggle img {
     width: 20px;
     height: 20px;
-    pointer-events: none;
 }
 
 body.dark-mode #dark-mode-toggle {
@@ -266,11 +298,6 @@ body.dark-mode #dark-mode-toggle {
 
 body.dark-mode a {
     color: #90caf9 !important;
-}
-
-body.dark-mode header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
 }
 
 body.dark-mode nav a {
@@ -283,28 +310,17 @@ body.dark-mode .browse-results {
     color: #f5f5f5;
 }
 
-body.dark-mode form button[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
 body.dark-mode form button[type="reset"] {
     background-color: #555;
-    color: var(--text-color);
 }
 
-body.dark-mode footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
+/* RIGHT SECTION */
 .right-section {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* RIGHT ALIGN DARK MODE BUTTON */
 .footer-controls {
     margin-left: auto;
     display: flex;
