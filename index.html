@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homoeopathy Shabdkosh</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@3/build/index.js"></script>
+</head>
+
+<body>
+
+<header>
+    <!-- LEFT LOGO -->
+    <img src="images/hindi-logo.png" alt="Left Logo" class="logo left-logo">
+
+    <!-- CENTER TITLE -->
+    <div class="title-container">
+        <h1>होम्योपैथी शब्दकोश</h1>
+        <h1>Homoeopathy Shabdkosh</h1>
+        <h3>
+            (केंद्रीय होम्योपैथी अनुसंधान परिषद् की एक पहल)<br>
+            आयुष मंत्रालय, भारत सरकार<br>
+            (An initiative by Central Council for Research in Homoeopathy)
+        </h3>
+        <p>Ministry of Ayush, Govt. of India</p>
+    </div>
+
+    <!-- RIGHT LOGO -->
+    <div class="right-section">
+        <img src="images/logo.png" alt="Right Logo" class="logo right-logo">
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://ccrhindia.ayush.gov.in/" target="_blank">Official Website</a>
+    <a href="contributers.html">Contributers</a>
+</nav>
+
+<hr>
+
+<main>
+    <form>
+        <input id="text-field" type="text" placeholder="Enter a word">
+        <button id="search-button" type="submit">Search</button>
+        <button id="reset-button" type="reset">Reset</button>
+    </form>
+    <br><br><br>
+    <div>
+        <p class="home-content">Homoeopathy ShabdKosh is a dedicated digital platform designed to provide simple and  accurate Hindi meanings of technical terms used in Homoeopathy. This portal serves as a reliable reference source for students, practitioners, researchers, translators, and officials engaged in official language implementation. In today's context, where English terminology dominates medical and research communication, a growing need exists for clear and consistent Hindi equivalents. This initiative aims to bridge that gap by presenting complex Homoeopathic terms in an easy-to-understand Hindi format, thereby promoting the effective use of Hindi in academic, clinical, and administrative work.</p>
+    </div>
+
+    <div class="result" style="display:none;"></div>
+
+    <section class="browse-section">
+        <div class="browse">
+            <p>Browse by Letter:</p>
+            <div id="letter-buttons"></div>
+        </div>
+
+        <div class="browse-results" style="display:none;"></div>
+    </section>
+</main>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/CCRHAYUSH/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ccrhindia/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/ccrhindia" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCnW75XNqYK87vc4W_hkzGYQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <p>&copy; Central Council for Research in Homoeopathy (CCRH) 2026</p>
+
+    <div class="footer-controls">
+        <button id="dark-mode-toggle">
+            <img src="images/night.ico" class="dark-mode-icon">
+        </button>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
